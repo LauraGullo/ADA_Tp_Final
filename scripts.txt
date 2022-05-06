@@ -1,0 +1,49 @@
+CREATE DATABASE `db_tpfinal`
+
+
+INSERT INTO db_tpfinal.`user`
+(mail, name, password, phone)
+VALUES('mlg@gmail.com', 'Laura', 'contra', 5555555);
+
+
+INSERT INTO db_tpfinal.question
+(content, id_concept, concept_id_concept)
+VALUES('¿Qué son los atributos?', 1, 1), ('¿Cuál es la forma correcta de crear un método?', 1, 1), 
+('¿Con cuál de los siguientes caracteres puedo hacer un comentario?', 2, 2) ;
+
+
+INSERT INTO db_tpfinal.`level`
+(name)
+VALUES('Basico');
+
+
+INSERT INTO db_tpfinal.example
+(content, description, id_concept, concept_id_concept)
+VALUES('public class Animal { String name; }', 'Atributos', 1, 1), ('// comment until end of line', 'Comments', 2, 2),
+('class Animal {   String name;  }', 'Classes', 3, 3);
+
+
+INSERT INTO db_tpfinal.concept
+(content, id_chapter, name, `number`, chapter_id_chapter)
+VALUES('Los atributos o variables, son porciones de informacion que un objeto posee o conoce de si mismo. 
+Se declaran con un identificador y el tipo de dato correspondiente. Los metodos son bloques de codigo que se pueden llamar 
+para evitar reutilizar codigo', 1, 'Fields and methods', 1, 1), ('Es texto dentro del codigo que no se ejecuta. Sirve para aclarar funcionamiento del mismo.Ej: 
+//Comentario de una sola linea, /*Comentario de varias lineas*/', 1, 'Comments', 2, 1), ('Las clases son planos de construccion. Para darle uso a una clase se tiene que instanciar un objeto. 
+Las clases tienen dos elementos importantes que la definen: los atributos y los metodos.', 1, 'Classes', 3, 1);
+
+
+
+INSERT INTO db_tpfinal.chapter
+(id_level, name, `number`, level_id_level)
+VALUES(1, 'Java building blocks', 1, 1);
+
+
+
+INSERT INTO db_tpfinal.answers
+(content, id_question, its_correct, question_id_question)
+VALUES('Son las características que da la clase', 1, 1, 1), ('Son las operaciones que realiza la clase', 1, 0, 1), ('Son las instancias de una clas', 1, 0, 1), 
+('nombreClase(método){lista Parámetros}', 2, 0, 2), ('tipo-retorno nombreClase{//Cuerpo del método}', 2, 0, 2), ('tipo-retorno nombreClase(lista parámetros){Cuerpo del método}', 2, 1, 2),
+('!', 3, 0, 3), ('{}', 3, 0, 3), ('//', 3, 1, 3);
+
+
+
